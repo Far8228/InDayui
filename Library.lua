@@ -3525,16 +3525,12 @@ function Library:CreateWindow(...)
                 -- TODO: add cursor fade?
                 local State = InputService.MouseIconEnabled;
 
-                while Toggled and ScreenGui.Parent do
-                    InputService.MouseIconEnabled = false;
 
                     local mPos = InputService:GetMouseLocation();
 
                     RenderStepped:Wait();
                 end;
 
-                InputService.MouseIconEnabled = State;
-                
             end);
         end;
 
